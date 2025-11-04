@@ -2,16 +2,29 @@
   --white:#fff; --black:#0b0f13;
   --neutral-50:#fafbfc; --neutral-100:#f6f7f9; --neutral-200:#e6e9ee; --neutral-300:#d4d9e2;
   --neutral-600:#6b7280; --neutral-700:#4b5563; --neutral-800:#1f2937; --neutral-900:#0f172a;
-  --brand-500:#2563eb; --accent-600:#10b981; --danger-600:#ef4444;
+  --brand-500:#1f54cf; --accent-600:#0ea773; --danger-600:#d22f2f;
   --radius-sm:6px; --radius-md:10px; --radius-lg:16px;
   --shadow-sm:0 2px 8px rgba(2,6,23,.06); --shadow-md:0 6px 20px rgba(2,6,23,.08); --shadow-lg:0 20px 40px rgba(2,6,23,.12);
   --space-04:4px; --space-08:8px; --space-12:12px; --space-16:16px; --space-24:24px; --space-32:32px; --space-48:48px; --space-64:64px;
   --container:1120px;
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+  --bg:#fff; --text:#0f172a; --muted:#4b5563;
+  --card:#fff; --border:#e6e9ee;
+  --link:#1f54cf;
+}
+[data-theme="dark"]{
+  --bg:#0f1216; --text:#f1f4f8; --muted:#c9d1d9;
+  --card:#12161c; --border:#2a3140;
+  --link:#7aa2ff;
+}
+[data-contrast="high"]{
+  --bg:#000; --text:#fff; --muted:#fff;
+  --card:#000; --border:#fff;
+  --link:#00e;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;color:var(--neutral-900);font:16px/1.55 var(--font);background:#fff;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--text);background:var(--bg);font:16px/1.55 var(--font);-webkit-text-size-adjust:100%}
 img,svg,video{max-width:100%;display:block;height:auto}
 .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 .section{padding:var(--space-32) 0}
@@ -19,10 +32,12 @@ h1,h2,h3{margin:0 0 12px}
 h1{font-size:clamp(28px,4vw,40px);line-height:1.12}
 h2{font-size:clamp(22px,3.2vw,28px);line-height:1.18}
 h3{font-size:clamp(18px,2.4vw,20px);line-height:1.22}
-a{color:var(--brand-500);text-decoration:none}
+a{color:var(--link);text-decoration:none}
 a:hover{text-decoration:underline}
 .hidden{display:none!important}
-:focus-visible{outline:2px solid var(--brand-500);outline-offset:2px}
+:focus-visible{outline:3px solid var(--brand-500);outline-offset:3px}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#fff;color:#000;padding:8px 12px;border-radius:8px;z-index:2000}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
