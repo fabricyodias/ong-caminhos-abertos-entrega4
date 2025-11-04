@@ -1,4 +1,5 @@
 import { Templates } from './templates.js';
+import { mountForms } from './forms.js';
 
 const routes = {
   '/': Templates.home,
@@ -6,50 +7,29 @@ const routes = {
   '/cadastro': Templates.cadastro
 };
 
-function currentPath() {
-  const p = (location.hash || '#/').slice(1);
-  return routes[p] ? p : '/';
-}
-
-export async function render() {
+function render(path) {
+  const view = routes[path] || routes['/'];
   const app = document.getElementById('app');
   if (!app) return;
+  app.innerHTML = view();
+  app.focus();
+  mountForms();
+}
 
-  const path = currentPath();
-  const tpl = routes[path];
-
-  let html = '';
-  try { html = tpl ? tpl() : ''; }
-  catch (err) {
-    html = `<section class="container section"><div class="alert alert-danger">Erro ao renderizar: ${String(err)}</div></section>`;
-  }
-  app.innerHTML = html;
-
-  try {
-    const mod = await import('./ui.js');
-    if (typeof mod.enhanceUI === 'function') mod.enhanceUI();
-  } catch {}
-
-  if (path === '/cadastro') {
-    try {
-      const mod = await import('./forms.js');
-      if (typeof mod.initForm === 'function') mod.initForm();
-    } catch {}
-  }
-
-  document.querySelectorAll('.nav a[aria-current="page"]').forEach(a => a.removeAttribute('aria-current'));
-  const active = document.querySelector(`.nav a[data-route="${path}"]`);
-  if (active) active.setAttribute('aria-current', 'page');
-
-  window.scrollTo({ top: 0, behavior: 'instant' });
+function parse() {
+  const hash = location.hash.replace(/^#/, '');
+  const path = hash.split('?')[0] || '/';
+  return path;
 }
 
 export function startRouter() {
-  window.addEventListener('hashchange', render);
-  if (!location.hash) {
-    location.hash = '/';
-    setTimeout(render, 0);
-    return;
-  }
-  render();
+  render(parse());
+  window.addEventListener('hashchange', () => render(parse()));
+  document.body.addEventListener('click', (e) => {
+    const a = e.target.closest('a[data-route]');
+    if (!a) return;
+    e.preventDefault();
+    const href = a.getAttribute('href');
+    if (href && href.startsWith('#')) location.hash = href.slice(1);
+  });
 }
