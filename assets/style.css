@@ -1,0 +1,241 @@
+/* Estilos básicos só para leitura confortável e organização.
+   Nada avançado ainda, porque CSS hardcore vem depois na disciplina. */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  color: #222;
+  background-color: #f8f8f8;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #222;
+  font-size: .95rem;
+  font-weight: 500;
+}
+
+main {
+  margin-bottom: 3rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.hero-texto h2 {
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.hero-texto p {
+  margin-bottom: .5rem;
+}
+
+.destaque {
+  font-weight: 600;
+  color: #444;
+}
+
+.hero-imagem img {
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.hero-imagem figcaption {
+  font-size: .8rem;
+  color: #555;
+  margin-top: .25rem;
+}
+
+.bloco {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.bloco > header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.subbloco {
+  margin-top: 1rem;
+}
+
+.subbloco h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+.subbloco ul {
+  margin-left: 1.2rem;
+  margin-top: .5rem;
+}
+
+.contato address p {
+  margin-bottom: .4rem;
+  font-style: normal;
+}
+
+.projeto {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .projeto {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+.projeto figure img {
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.projeto figure figcaption {
+  font-size: .8rem;
+  color: #555;
+  margin-top: .25rem;
+}
+
+.impacto {
+  font-size: .9rem;
+  background-color: #f0f0f0;
+  display: inline-block;
+  padding: .4rem .6rem;
+  border-radius: .4rem;
+  margin-top: .5rem;
+}
+
+.destaque-voluntario {
+  border-left: 4px solid #333;
+}
+
+.doacao {
+  border-left: 4px solid #006400;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+  border-radius: .4rem;
+  padding: .7rem 1rem;
+  font-size: .95rem;
+  cursor: pointer;
+  margin-top: .75rem;
+}
+
+.botao:hover {
+  filter: brightness(1.1);
+}
+
+.form-voluntario {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: .4rem;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+legend {
+  font-weight: 600;
+  font-size: .95rem;
+  padding: 0 .4rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  margin-bottom: .5rem;
+}
+
+.campo label {
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.campo input {
+  padding: .6rem .7rem;
+  border-radius: .4rem;
+  border: 1px solid #bbb;
+  font-size: .9rem;
+  background-color: #fff;
+}
+
+.grupo-duplo {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 480px) {
+  .grupo-duplo {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: .8rem;
+  color: #555;
+  padding: 2rem 0;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projetos | Instituto Caminhos Abertos</title>
+  <meta name="description" content="Projetos ativos, categorias e formas de participação.">
+  <link rel="stylesheet" href="./assets/css/design-system.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container bar">
+      <a class="brand" href="#/" data-route="/">Instituto Caminhos Abertos</a>
+      <button class="hamburger" id="btnHamburger" aria-label="Abrir menu" aria-controls="navPanel" aria-expanded="false"><span></span></button>
+      <nav class="nav" id="navPanel">
+        <button class="nav-close" id="btnCloseNav" aria-label="Fechar menu">×</button>
+
+        <ul>
+          <li><a href="#/" data-route="/">Início</a></li>
+          <li>
+            <a href="#/projetos" data-route="/projetos" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
+            <ul class="submenu" aria-label="submenu projetos">
+              <li><a href="#/projetos" data-route="/projetos">Reforço Escolar</a></li>
+              <li><a href="#/projetos" data-route="/projetos">Tecnologia e Futuro</a></li>
+            </ul>
+          </li>
+          <li><a href="#/cadastro" data-route="/cadastro">Seja Voluntário</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+  <main id="app"></main>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2025 Instituto Caminhos Abertos</div>
+  </footer>
+
+  <noscript>Ative o JavaScript para visualizar o conteúdo.</noscript>
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
+
+
+
