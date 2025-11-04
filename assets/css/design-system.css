@@ -41,3 +41,42 @@ a:hover{text-decoration:underline}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
+
+
+body[data-theme="dark"] {
+  --bg: #0e0e0e;
+  --card: #1a1a1a;
+  --text: #f5f5f5;
+  --text-secondary: #d0d0d0;
+  --border: #333;
+  --neutral-100: #2a2a2a;
+  --neutral-200: #3a3a3a;
+  --btn-primary-bg: #2563eb;
+  --btn-primary-text: #ffffff;
+  --alert-bg: #1f2937;
+  --alert-text: #f9fafb;
+  --alert-border: #374151;
+}
+
+body[data-theme="contrast"] {
+  --bg: #000;
+  --card: #000;
+  --text: #fff;
+  --text-secondary: #fff;
+  --border: #fff;
+  --neutral-100: #000;
+  --neutral-200: #000;
+  --btn-primary-bg: #fff;
+  --btn-primary-text: #000;
+  --alert-bg: #fff;
+  --alert-text: #000;
+  --alert-border: #fff;
+}
+
+.alert {
+  background: var(--alert-bg);
+  color: var(--alert-text);
+  border: 1px solid var(--alert-border);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+}
