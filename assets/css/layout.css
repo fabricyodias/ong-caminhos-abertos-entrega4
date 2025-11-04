@@ -1,15 +1,16 @@
-.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--neutral-200);z-index:100}
+.site-header{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--border);z-index:100}
 .site-header .bar{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:inline-flex;align-items:center;gap:10px;color:var(--neutral-900);font-weight:700;text-decoration:none}
-.hamburger{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--neutral-300);border-radius:6px;background:#fff}
-.hamburger span{width:18px;height:2px;background:var(--neutral-800);position:relative}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--text);font-weight:700;text-decoration:none}
+.actions{display:flex;gap:8px;align-items:center}
+.hamburger{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--text)}
+.hamburger span{width:18px;height:2px;background:var(--text);position:relative}
 .hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0;right:0;height:2px;background:inherit}
 .hamburger span::before{top:-6px}.hamburger span::after{top:6px}
 
-.nav{position:fixed;top:0;right:0;bottom:0;width:80vw;max-width:320px;background:#fff;border-left:1px solid var(--neutral-200);
+.nav{position:fixed;top:0;right:0;bottom:0;width:80vw;max-width:320px;background:var(--card);border-left:1px solid var(--border);
   transform:translateX(100%);transition:transform .25s ease;padding:16px;overflow:auto;z-index:99}
 .nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
-.nav a{color:var(--neutral-900);padding:10px 6px;display:inline-block;text-decoration:none}
+.nav a{color:var(--text);padding:10px 6px;display:inline-block;text-decoration:none}
 body.nav-open .nav{transform:translateX(0)}
 .submenu{display:none}
 
@@ -18,24 +19,23 @@ body.nav-open .nav{transform:translateX(0)}
   .nav{position:static;width:auto;max-width:none;transform:none;border:0;padding:0;overflow:visible}
   .nav ul{flex-direction:row;align-items:center;gap:24px}
   .nav li{position:relative}
-  .submenu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;background:#fff;border:1px solid var(--neutral-200);
+  .submenu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;background:var(--card);border:1px solid var(--border);
     border-radius:var(--radius-md);box-shadow:var(--shadow-md);padding:8px 0;display:none;z-index:1000}
   .submenu a{display:block;padding:8px 16px}
   .submenu a:hover{background:var(--neutral-100)}
 }
-/* mostra dropdown só em dispositivos com hover real (evita ficar aberto em touch) */
 @media (min-width:1024px) and (hover:hover){
   .nav > ul > li:hover > .submenu,
   .nav > ul > li:focus-within > .submenu{display:block}
 }
 
-.site-footer{margin-top:var(--space-48);background:var(--neutral-100);border-top:1px solid var(--neutral-200);padding:24px 0;text-align:center;color:var(--neutral-700)}
+.site-footer{margin-top:var(--space-48);background:var(--neutral-100);border-top:1px solid var(--border);padding:24px 0;text-align:center;color:var(--muted)}
 
 .home-hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
 .hero-title{font-size:clamp(28px,5.2vw,48px);line-height:1.06}
-.hero-sub{color:var(--neutral-700)}
+.hero-sub{color:var(--muted)}
 .kpis{display:flex;gap:12px;flex-wrap:wrap}
-.kpi{background:var(--neutral-100);border:1px solid var(--neutral-200);padding:8px 12px;border-radius:999px}
+.kpi{background:var(--neutral-100);border:1px solid var(--border);padding:8px 12px;border-radius:999px}
 @media (min-width:900px){.home-hero{grid-template-columns:1.2fr .8fr}}
 
 .card-grid{display:grid;grid-template-columns:1fr;gap:16px}
@@ -45,7 +45,7 @@ body.nav-open .nav{transform:translateX(0)}
 body.nav-open{overflow:hidden}
 .nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;z-index:90}
 body.nav-open .nav-backdrop{display:block}
-.nav-close{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--neutral-300);border-radius:6px;background:#fff;font-size:22px;line-height:1;margin-bottom:8px;cursor:pointer}
+.nav-close{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--text);font-size:22px;line-height:1;margin-bottom:8px;cursor:pointer}
 @media (min-width:1024px){
   .nav-backdrop{display:none!important}
   .nav-close{display:none}
