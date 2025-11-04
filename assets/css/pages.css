@@ -1,6 +1,6 @@
 .projects-header{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
 .filters{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.tag{padding:6px 10px;border:1px solid var(--neutral-300);border-radius:999px;cursor:pointer}
+.tag{padding:6px 10px;border:1px solid var(--border);border-radius:999px;cursor:pointer}
 .tag.on{background:var(--neutral-100)}
 .signup header h2{margin-bottom:12px}
 @media (min-width:720px){
