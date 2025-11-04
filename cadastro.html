@@ -11,30 +11,38 @@
   <link rel="stylesheet" href="./assets/css/pages.css">
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#app">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner">
     <div class="container bar">
-      <a class="brand" href="#/" data-route="/">Instituto Caminhos Abertos</a>
-      <button class="hamburger" id="btnHamburger" aria-label="Abrir menu" aria-controls="navPanel" aria-expanded="false"><span></span></button>
-      <nav class="nav" id="navPanel">
+      <a class="brand" href="#/" data-route="/" aria-label="Página inicial">Instituto Caminhos Abertos</a>
+      <div class="actions">
+        <button id="btnContrast" class="btn btn-outline" aria-pressed="false" aria-label="Ativar alto contraste">Alto contraste</button>
+        <button id="btnTheme" class="btn btn-outline" aria-pressed="false" aria-label="Ativar modo escuro">Escuro</button>
+        <button class="hamburger" id="btnHamburger" aria-label="Abrir menu" aria-controls="navPanel" aria-expanded="false"><span></span></button>
+      </div>
+      <nav class="nav" id="navPanel" aria-label="Menu principal">
         <button class="nav-close" id="btnCloseNav" aria-label="Fechar menu">×</button>
-        <ul>
-          <li><a href="#/" data-route="/">Início</a></li>
-          <li>
-            <a href="#/projetos" data-route="/projetos" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
+        <ul role="menubar">
+          <li role="none"><a role="menuitem" href="#/" data-route="/">Início</a></li>
+          <li role="none">
+            <a role="menuitem" href="#/projetos" data-route="/projetos" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
             <ul class="submenu" aria-label="submenu projetos">
               <li><a href="#/projetos" data-route="/projetos">Reforço Escolar</a></li>
               <li><a href="#/projetos" data-route="/projetos">Tecnologia e Futuro</a></li>
             </ul>
           </li>
-          <li><a href="#/cadastro" data-route="/cadastro">Seja Voluntário</a></li>
+          <li role="none"><a role="menuitem" href="#/cadastro" data-route="/cadastro" aria-current="page">Seja Voluntário</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="nav-backdrop" id="navBackdrop" hidden></div>
-  <main id="app"></main>
 
-  <footer class="site-footer">
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer" role="contentinfo">
     <div class="container">&copy; 2025 Instituto Caminhos Abertos</div>
   </footer>
 
@@ -42,6 +50,3 @@
   <script type="module" src="./assets/js/app.js"></script>
 </body>
 </html>
-
-
-
