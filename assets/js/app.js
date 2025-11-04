@@ -2,8 +2,8 @@ import { startRouter } from './router.js';
 import { enhanceUI } from './ui.js';
 
 function boot() {
-  enhanceUI();         // garante menu funcionando mesmo antes do render
-  startRouter();       // carrega a rota inicial e re-renderiza conforme o hash
+  enhanceUI();
+  startRouter();
 }
 
 if (document.readyState === 'loading') {
