@@ -80,3 +80,31 @@ body[data-theme="contrast"] {
   padding: 12px 16px;
   border-radius: var(--radius-md);
 }
+
+/* ===== Correções de contraste ===== */
+body[data-theme="dark"] .btn,
+body[data-theme="contrast"] .btn {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: 1px solid var(--btn-primary-bg);
+}
+
+body[data-theme="dark"] .btn:hover,
+body[data-theme="contrast"] .btn:hover {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+body[data-theme="dark"] .alert,
+body[data-theme="contrast"] .alert {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body[data-theme="dark"] .card,
+body[data-theme="contrast"] .card {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
