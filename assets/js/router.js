@@ -1,5 +1,6 @@
 import { Templates } from './templates.js';
 import { mountForms } from './forms.js';
+import { enhanceUI } from './ui.js';
 
 const routes = {
   '/': Templates.home,
@@ -11,9 +12,13 @@ function render(path) {
   const view = routes[path] || routes['/'];
   const app = document.getElementById('app');
   if (!app) return;
-  app.innerHTML = view();
+
+  app.innerHTML = view();   // injeta o HTML da rota
   app.focus();
+
+  // depois que o HTML existe, conectamos os comportamentos
   mountForms();
+  enhanceUI();              // menu, modal, filtros, campanha de doação, etc.
 }
 
 function parse() {
@@ -25,6 +30,7 @@ function parse() {
 export function startRouter() {
   render(parse());
   window.addEventListener('hashchange', () => render(parse()));
+  // navegação SPA por data-route (links #/…)
   document.body.addEventListener('click', (e) => {
     const a = e.target.closest('a[data-route]');
     if (!a) return;
