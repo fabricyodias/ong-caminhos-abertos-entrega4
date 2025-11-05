@@ -1,5 +1,4 @@
 export function enhanceUI() {
-  // ---------- Menu mobile ----------
   const btn = document.getElementById('btnHamburger') || document.querySelector('.hamburger');
   const nav = document.getElementById('navPanel');
   const closeBtn = document.getElementById('btnCloseNav');
@@ -26,7 +25,7 @@ export function enhanceUI() {
   const handleResize = () => { if (mql.matches) closeNav(); };
   mql.addEventListener ? mql.addEventListener('change', handleResize) : mql.addListener(handleResize);
 
-  // ---------- Tema e alto contraste ----------
+
   const btnTheme = document.getElementById('btnTheme');
   const btnContrast = document.getElementById('btnContrast');
   const savedTheme = localStorage.getItem('theme');
@@ -53,7 +52,7 @@ export function enhanceUI() {
     };
   }
 
-  // ---------- Modal genérico (Projetos) ----------
+
   document.querySelectorAll('[data-open-modal]').forEach(btn => {
     const sel = btn.getAttribute('data-open-modal');
     const modal = document.querySelector(sel);
@@ -63,7 +62,7 @@ export function enhanceUI() {
     if (close) close.addEventListener('click', () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); });
   });
 
-  // ---------- Filtros (Projetos) ----------
+
   const filterTags = document.querySelectorAll('.filters .tag');
   const grid = document.querySelector('.card-grid');
   if (filterTags.length && grid) {
@@ -83,7 +82,7 @@ export function enhanceUI() {
     });
   }
 
-  // ---------- Campanha de Doação (Home) ----------
+
   const barra = document.querySelector('#barraProgresso');
   const valorDoado = document.querySelector('#valorDoado');
   const botoes = document.querySelectorAll('[data-doacao]');
@@ -111,3 +110,4 @@ export function enhanceUI() {
     });
   }
 }
+
