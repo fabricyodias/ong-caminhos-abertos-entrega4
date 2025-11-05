@@ -22,6 +22,23 @@ export const Templates = {
     <section class="container section">
       <header><h2>Transparência</h2></header>
       <div class="alert alert-info" role="status">Todos os apoios são registrados e publicados em relatórios trimestrais.</div>
+    </section>
+
+    <!-- Campanha de Doação (Home) -->
+    <section class="container section" aria-labelledby="titulo-campanha">
+      <header><h2 id="titulo-campanha">Campanha de Doação</h2></header>
+      <p>Meta: R$ 12.000 para montar 10 estações de estudo.</p>
+
+      <p id="valorDoado" aria-live="polite">R$ 0</p>
+      <div class="progress" style="height:12px; background:var(--neutral-200); border-radius:999px; overflow:hidden;">
+        <div id="barraProgresso" style="height:100%; width:0%; background:linear-gradient(90deg,var(--accent-600),var(--brand-500));"></div>
+      </div>
+
+      <div style="margin-top: var(--space-08); display:flex; gap:8px; flex-wrap:wrap">
+        <button class="btn btn-outline" data-doacao="20">+ R$ 20</button>
+        <button class="btn btn-outline" data-doacao="50">+ R$ 50</button>
+        <button class="btn btn-outline" data-doacao="100">+ R$ 100</button>
+      </div>
     </section>`;
   },
 
@@ -69,20 +86,6 @@ export const Templates = {
             <button class="btn btn-primary" data-open-modal="#modalProjeto">Saiba mais</button>
           </div>
         </article>
-      </div>
-    </section>
-
-    <section class="container section" aria-labelledby="titulo-campanha">
-      <header><h2 id="titulo-campanha">Campanha de Doação</h2></header>
-      <p>Meta: R$ 12.000 para montar 10 estações de estudo.</p>
-      <div id="valorDoacao" class="kpi" aria-live="polite" style="display:inline-block; margin: var(--space-08) 0">R$ 0</div>
-      <div id="barraDoacao" data-meta="12000" aria-label="Progresso da campanha" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="12000" style="--p:0%; height:12px; background:var(--neutral-200); border-radius:999px; overflow:hidden; position:relative">
-        <span style="position:absolute; left:0; top:0; bottom:0; width:var(--p); background:linear-gradient(90deg,var(--accent-600),var(--brand-500)); display:block"></span>
-      </div>
-      <div style="margin-top: var(--space-08); display:flex; gap:8px; flex-wrap:wrap">
-        <button class="btn btn-outline" data-add-doacao="20">+ R$ 20</button>
-        <button class="btn btn-outline" data-add-doacao="50">+ R$ 50</button>
-        <button class="btn btn-outline" data-add-doacao="100">+ R$ 100</button>
       </div>
     </section>
 
