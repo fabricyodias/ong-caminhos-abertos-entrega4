@@ -13,12 +13,11 @@ function render(path) {
   const app = document.getElementById('app');
   if (!app) return;
 
-  app.innerHTML = view();   // injeta o HTML da rota
+  app.innerHTML = view();  
   app.focus();
 
-  // depois que o HTML existe, conectamos os comportamentos
   mountForms();
-  enhanceUI();              // menu, modal, filtros, campanha de doação, etc.
+  enhanceUI();             
 }
 
 function parse() {
@@ -39,3 +38,4 @@ export function startRouter() {
     if (href && href.startsWith('#')) location.hash = href.slice(1);
   });
 }
+
