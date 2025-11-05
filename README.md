@@ -1,16 +1,16 @@
-Instituto Caminhos Abertos
+1. Instituto Caminhos Abertos
 
 Inclusão e Educação Através da Tecnologia
 
 Projeto desenvolvido como Experiência Prática IV – Curso de Análise e Desenvolvimento de Sistemas
 Universidade Cruzeiro do Sul
 
-Sobre o Projeto
+2. Sobre o Projeto
 
 O Instituto Caminhos Abertos é uma aplicação web criada para simular o site de uma ONG dedicada à inclusão social de jovens por meio da educação, tecnologia e desenvolvimento socioemocional.
 O sistema foi projetado para oferecer uma experiência moderna, acessível e funcional, aplicando os princípios do desenvolvimento front-end com HTML, CSS e JavaScript modular.
 
-Funcionalidades
+3. Funcionalidades
 
 Navegação em Single Page Application (SPA)
 
@@ -26,14 +26,15 @@ Layout responsivo e adaptável a todos os tamanhos de tela
 
 Estrutura modular com componentes reutilizáveis
 
-Tecnologias Utilizadas
+4. Tecnologias Utilizadas
 Categoria	Ferramentas
 Estrutura	HTML5 semântico
 Estilo	CSS3 (Flexbox, Grid, variáveis CSS, Design System próprio)
 Interatividade	JavaScript modular (app.js, router.js, ui.js)
 Versionamento	Git + GitHub Flow
 Deploy	GitHub Pages
-Acessibilidade
+
+5. Acessibilidade
 
 Implementações baseadas nas diretrizes WCAG 2.1 – Nível AA:
 
@@ -47,7 +48,7 @@ Modo alto contraste e modo escuro com persistência local
 
 Inclusão de Skip Link para facilitar a navegação assistiva
 
-Otimização
+6. Otimização
 
 Minificação de CSS e JavaScript
 
@@ -57,7 +58,13 @@ Código limpo, modular e semanticamente organizado
 
 Hospedagem via GitHub Pages
 
-Estrutura do Projeto
+7. Conformidade com WCAG 2.1 Nível AA
+
+O projeto foi desenvolvido em conformidade com as diretrizes WCAG 2.1 (Web Content Accessibility Guidelines) no nível AA, conforme estabelecido pelo W3C.
+Essas diretrizes definem padrões internacionais para tornar o conteúdo web acessível a pessoas com diferentes tipos de deficiência, incluindo limitações visuais, auditivas, motoras e cognitivas.
+Entre as práticas aplicadas, destacam-se: o uso de estrutura semântica adequada, contraste mínimo de 4.5:1, navegação completa por teclado, suporte a leitores de tela, implementação de modos de alto contraste e escuro, além de feedback visual e textual em formulários e componentes interativos.
+
+8. Estrutura do Projeto
 ong-caminhos-abertos-entrega4/
 │
 ├── index.html
@@ -81,12 +88,12 @@ ong-caminhos-abertos-entrega4/
 │
 └── README.md
 
-Deploy
+9. Deploy
 
 O site está disponível publicamente em:
 🔗 https://fabricyodias.github.io/ong-caminhos-abertos-entrega4/
 
-Autor
+10. Autor
 
 Fabricyo de Faria E. Dias
 Web Designer • UI/UX Designer • Desenvolvedor Front-end
@@ -94,17 +101,15 @@ Web Designer • UI/UX Designer • Desenvolvedor Front-end
 🎓 Estudante de Análise e Desenvolvimento de Sistemas – Universidade Cruzeiro do Sul
 🌐 github.com/fabricyodias
 
-Créditos
+11. Créditos
 
 Projeto acadêmico desenvolvido como parte das atividades práticas da disciplina Desenvolvimento Front-End para Web, aplicando fundamentos de acessibilidade, responsividade e versionamento de código.
 Todo o conteúdo textual e visual tem caráter didático e não representa uma ONG real.
 
-Licença
+12. Licença
 
 Este projeto é distribuído sob a licença MIT License.
 Você pode reutilizar, modificar e distribuir este código livremente, desde que mantenha os créditos originais.
-
-
 
 MIT License
 
